@@ -9,8 +9,6 @@ const getUserChoice = userInput => {
   }  
 };
 //console.log(getUserChoice('Scissors')); 
-//lucreaza corect pina aici, p4
-
 
 //Computer make a choice
 const getComputerChoice = () => {
@@ -59,11 +57,11 @@ let determineWinner = (userChoice, computerChoice) => {
 //determineWinner('rock', 'scissors');
 
 let playGame = () => {
-  let userChoice=getUserChoice('rock' || 'paper' || 'scossors');
+  let userChoice=getUserChoice('Scissors');
   let computerChoice=getComputerChoice();
-  console.log('The user: ' + getUserChoice(userChoice));
-  console.log('The computer: ' + getComputerChoice(computerChoice));
+  console.log('The user: ' + userChoice);
+  console.log('The computer: ' + computerChoice);
 
-  console.log(determineWinner(userChoice, computerChoice));
+  determineWinner(userChoice, computerChoice);
 };
 playGame();
